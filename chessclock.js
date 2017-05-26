@@ -11,11 +11,19 @@ function updateClock(starttime){
 		if (clockstate == 1){
 			// clockOne = (Math.floor((clockOne - .1) * 10)) / 10
 			clockOne = clockOne - .1
+			if (clockOne < 0){
+				alert("Player One has timed out!")
+				resetClock()
+			}
 			$("#clockOne").text(Math.floor(clockOne));
 		}
 		if (clockstate == 2){
 			// clockTwo = (Math.floor((clockTwo - .1) * 10)) / 10
 			clockTwo = clockTwo - .1
+			if (clockTwo < 0){
+				alert("Player Two has timed out!")
+				resetClock()
+			}
 			$("#clockTwo").text(Math.floor(clockTwo));
 		}
 }
@@ -30,12 +38,14 @@ function startClock(){
 			}, 100);	
 }
 
-// function stopClock(clockstate){
-// 	if (clockstate == 1){
-// 		clearInterval(clock);
-// 		clockstate = 0;
-// 	}
-// }
+function resetClock(){
+	console.log('addafa')
+	clearInterval(clock)
+	$("#startButton").show();
+	$(".titles").show();
+	clockstate = 0;
+}
+
 
 $(document).keypress(function(e) {
 	const code = e.keyCode || e.which
@@ -57,6 +67,7 @@ $(document).keypress(function(e) {
 $(document).ready(function() {
 	$('#setOne').bind('input', function() {
 		clockOne =  $(this).val()
+
 		$('#clockOne').text(clockOne)
 	});
 
@@ -83,9 +94,19 @@ $(document).ready(function() {
 		incrementTwo =  Number($(this).val())
     		 // get the current value of the input field.
 		});
-    	
+    
+    $('#resetButton').click(function(){
+    	resetClock()
+    })
 
 	$('#startButton').click(function() {
+		if (clockOne < 1 || clockTwo < 1){ //negative increments might be fun
+			alert("Initial Times for Clocks must be Positive.")
+			return
+		}
+
+		$('#resetButton').show()
+
 		console.log("incrementOne: " + incrementOne)
 		console.log("incrementTwo: " + incrementTwo)
 		startClock()
