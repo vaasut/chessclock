@@ -27,8 +27,8 @@
 			</div>
 			<div class = 'titles'> Set Time | Increment
 				<br>
-				<input type="number" id="setOne" placeholder="300"> |
-				<input type="number" id="incrementOne" placeholder="0">
+				<input type="number" min="0" id="setOne" placeholder="300"> |
+				<input type="number" min="0" id="incrementOne" placeholder="0">
 			</div>
 		</div>
 
@@ -48,11 +48,12 @@
 	</div>
 
 	<div class = 'center'>
-		<button id = 'startButton'> Start </button>
+		<button id = 'startButton' class = 'buttons'> Start </button>
+		<button id = 'resetButton' hidden = "true" class = 'buttons'> Reset </button>
 	</div>
 
 	<div style = "text-align: center; font-size: 18px;">
-		Set the Time and Increment in Seconds. <br> Player One presses <strong> a </strong> to start the clock and after their moves. <br> Player Two presses <strong>l</strong> after their moves.
+		Set the Time and Increment in Seconds.<br> Player One presses <strong> a </strong> after their moves.<br> Player Two presses <strong>l</strong> after their moves.
 	</div>
 
 
