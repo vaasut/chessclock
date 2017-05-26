@@ -1,0 +1,72 @@
+h1,h2 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+h3 {
+	font-size: 24;
+}
+
+#playerCase {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	margin-left: 50px;
+	margin-right: 50px;
+	border-radius: 5;
+	padding: 10px;
+	border-color: #5555bb;
+	border-style: solid;
+}
+
+.players{
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	font-size: 30;
+	flex-direction: column
+}
+
+.clock {
+	border-radius: 5;
+	border-color: #5555bb;
+	border-style: solid;
+}
+
+input[type=number] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 8px;
+}
+
+.center {
+	display: flex;
+	text-align: center;
+    justify-content: center;
+}
+
+#startButton {
+	font-size: 16px;
+    margin: 4px 2px;
+	padding: 10px 15px;
+	cursor: pointer;
+	background-color: white;
+    color: black;
+    border: 2px solid #5555bb;
+    text-decoration: none;
+}
+
+.titles{
+	font-size: 16px;
+}
+
