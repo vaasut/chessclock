@@ -66,6 +66,10 @@ input[type=number] {
     text-decoration: none;
 }
 
+#blue {
+	background-color: #9999ff
+}
+
 
 .titles{
 	font-size: 16px;

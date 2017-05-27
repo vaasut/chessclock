@@ -39,10 +39,10 @@ function startClock(){
 }
 
 function resetClock(){
-	console.log('addafa')
 	clearInterval(clock)
 	$("#startButton").show();
 	$(".titles").show();
+	$("#resetButton").hide();
 	clockstate = 0;
 }
 
@@ -54,12 +54,16 @@ $(document).keypress(function(e) {
 		clockstate = 2;
 		clockOne = clockOne + incrementOne
 		$('#clockOne').text(Math.floor(clockOne))
+		$('#blue').css("background-color", "#ffffff")
+		$('#white').css("background-color", "#9999ff")
   		}
 
   	if (code == 108 && clockstate == 2){
   		clockstate = 1;
   		clockTwo = clockTwo + incrementTwo
   		$('#clockTwo').text(Math.floor(clockTwo))
+  		$('#blue').css("background-color", "#9999ff")
+  		$('#white').css("background-color", "#ffffff")
   	}
 });
 
@@ -99,6 +103,7 @@ $(document).ready(function() {
     	resetClock()
     })
 
+
 	$('#startButton').click(function() {
 		if (clockOne < 1 || clockTwo < 1){ //negative increments might be fun
 			alert("Initial Times for Clocks must be Positive.")
@@ -106,9 +111,6 @@ $(document).ready(function() {
 		}
 
 		$('#resetButton').show()
-
-		console.log("incrementOne: " + incrementOne)
-		console.log("incrementTwo: " + incrementTwo)
 		startClock()
 	})
 })
