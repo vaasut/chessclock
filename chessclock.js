@@ -43,6 +43,7 @@ function resetClock(){
 	$("#startButton").show();
 	$(".titles").show();
 	$("#resetButton").hide();
+	$('#blue').css("background-color", "#9999ff")
 	clockstate = 0;
 }
 
@@ -110,7 +111,7 @@ $(document).ready(function() {
 		}
 
 		$('#resetButton').show()
-		
+
 		startClock()
 	})
 })
