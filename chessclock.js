@@ -103,7 +103,6 @@ $(document).ready(function() {
     	resetClock()
     })
 
-
 	$('#startButton').click(function() {
 		if (clockOne < 1 || clockTwo < 1){ //negative increments might be fun
 			alert("Initial Times for Clocks must be Positive.")
@@ -111,6 +110,7 @@ $(document).ready(function() {
 		}
 
 		$('#resetButton').show()
+		
 		startClock()
 	})
 })
