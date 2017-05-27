@@ -44,6 +44,7 @@ function resetClock(){
 	$(".titles").show();
 	$("#resetButton").hide();
 	$('#blue').css("background-color", "#9999ff")
+	$('#white').css("background-color", "#ffffff")
 	clockstate = 0;
 }
 
